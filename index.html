@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0f172a">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="styles.css">
-  <title>Laboratorio PNL | Alumno</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+<title>Laboratorio PNL | CECyTE 2026</title>
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><div class="logo">PNL</div><div><strong>Laboratorio de Procesamiento de Lenguaje Natural</strong><small>CECyTE · Actividad del 30 de septiembre de 2026</small></div></div>
+  <div class="brand"><div class="logo">PNL</div><div><strong>Laboratorio de Procesamiento de Lenguaje Natural</strong><small>CECyTE · aprende → practica → explica</small></div></div>
   <div class="status"><span id="netDot">●</span> <span id="netText">Comprobando...</span></div>
 </header>
 <nav class="nav" aria-label="Navegación principal">
@@ -18,54 +18,74 @@
   <button data-view="manual">Manual</button>
   <button data-view="casos">3 casos modelo</button>
   <button data-view="reto">Mi reto</button>
-  <button data-view="refuerzo">Equipos de refuerzo</button>
+  <button data-view="refuerzo">Refuerzo y exposición</button>
 </nav>
 <main class="wrap">
-  <section id="inicio" class="view active">
-    <div class="hero">
-      <div><span class="eyebrow">APRENDER → PRACTICAR → EXPLICAR</span><h1>El lenguaje humano puede convertirse en datos.</h1><p>Esta página te guía paso a paso. No necesitas dominar inglés ni matemáticas avanzadas. Primero entiende la idea, después practica y al final resuelve tu reto individual en hojas blancas.</p></div>
-      <div class="deadline"><b>ENTREGA</b><strong>Miércoles 30</strong><span>septiembre de 2026</span></div>
+<section id="inicio" class="view active">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">PARA MEDIA SUPERIOR · EXPLICADO CON PALABRAS SENCILLAS</span>
+      <h1>El lenguaje humano puede convertirse en datos… y después en decisiones.</h1>
+      <p>Primero mira cómo se hace. Luego intenta hacerlo tú. La página no espera que memorices inglés: cada palabra técnica se explica con ejemplos, dibujos y pasos.</p>
+      <div class="hero-actions"><button onclick="go('manual')">Empezar por el manual</button><button class="light" onclick="go('casos')">Ver los casos modelo</button></div>
     </div>
-    <div class="grid3">
-      <article class="card"><h3>1 · Estudia</h3><p>Lee los tres casos. Cada uno explica qué entra, qué hace el método y qué sale.</p><button onclick="go('casos')">Ver casos</button></article>
-      <article class="card"><h3>2 · Practica</h3><p>Haz las mini preguntas. La página te avisa si tu respuesta coincide y te explica por qué.</p><button onclick="go('casos')">Practicar</button></article>
-      <article class="card accent"><h3>3 · Resuelve</h3><p>Escribe tu clave de actividad y recibirás <b>solo tu reto</b>. La entrega oficial es en hojas blancas.</p><button onclick="go('reto')">Abrir mi reto</button></article>
+    <div class="deadline"><b>ENTREGA</b><strong>30</strong><span>miércoles · septiembre · 2026</span></div>
+  </div>
+  <div class="learning-map">
+    <div class="map-title">Mapa del aprendizaje</div>
+    <div class="mapline">
+      <div><span>01</span><b>Texto</b><small>lo que escribe una persona</small></div>
+      <i>→</i>
+      <div><span>02</span><b>Tokens</b><small>piezas que puede manejar la computadora</small></div>
+      <i>→</i>
+      <div><span>03</span><b>Representación</b><small>conteos, pesos o vectores</small></div>
+      <i>→</i>
+      <div><span>04</span><b>Modelo</b><small>reglas o red que procesa</small></div>
+      <i>→</i>
+      <div><span>05</span><b>Resultado</b><small>clasificación, resumen, respuesta…</small></div>
     </div>
-    <div class="notice"><b>Regla de oro:</b> puedes usar una IA para estudiar, pero en tu hoja debe aparecer <strong>tu procedimiento</strong>: qué hiciste, qué obtuviste y por qué.</div>
-    <div class="simple-glossary"><h2>Palabras técnicas, en lenguaje sencillo</h2><div class="glossary-grid"><div><b>Token</b><span>pedacito de texto que el sistema puede manejar.</span></div><div><b>Vector</b><span>una lista de números que representa información.</span></div><div><b>Modelo</b><span>un sistema que usa datos para producir una salida.</span></div><div><b>Embedding</b><span>representación numérica que intenta conservar relaciones de significado.</span></div></div></div>
-  </section>
+  </div>
+  <div class="grid3">
+    <article class="card"><span class="num">01</span><h3>Entiende</h3><p>Lee la teoría corta de cada caso. Mira el ejemplo completo y deduce por qué aparece ese resultado.</p><button onclick="go('casos')">Aprender con ejemplos</button></article>
+    <article class="card"><span class="num">02</span><h3>Practica</h3><p>Contesta las preguntas. Si fallas, la página te explica la idea en lenguaje sencillo.</p><button onclick="go('casos')">Practicar</button></article>
+    <article class="card accent"><span class="num">03</span><h3>Resuelve</h3><p>Escribe <b>tu número de matrícula</b>. El sistema te muestra tu reto individual.</p><button onclick="go('reto')">Abrir mi reto</button></article>
+  </div>
+  <div class="notice"><b>Regla de oro:</b> la IA puede ayudarte a estudiar, pero tu evidencia debe mostrar <strong>tu procedimiento</strong> y una explicación con tus propias palabras.</div>
+  <div class="glossary"><h2>Mini diccionario: ingles → español sencillo</h2><div class="glossary-grid" id="glossary"></div></div>
+</section>
 
-  <section id="manual" class="view">
-    <div class="section-head"><span class="eyebrow">MANUAL</span><h2>Cómo usar esta página</h2><p>Lee este apartado antes de empezar. Está escrito con palabras simples para que puedas avanzar aunque tu lectura de inglés sea limitada.</p></div>
-    <div class="steps">
-      <div><span>1</span><div><h3>Entra y revisa el material</h3><p>Usa <b>3 casos modelo</b>. No te saltes los pasos. En PNL, el orden importa.</p></div></div>
-      <div><span>2</span><div><h3>Practica antes de tu tarea</h3><p>Contesta las pequeñas preguntas. Si fallas, lee la explicación y vuelve a intentarlo.</p></div></div>
-      <div><span>3</span><div><h3>Busca tu clave</h3><p>Tu docente te dará una clave como <code>PNL-07-J3P</code>. Escríbela exactamente.</p></div></div>
-      <div><span>4</span><div><h3>Resuelve tu reto en papel</h3><p>La página muestra la situación y las preguntas. <b>No sustituye tu entrega.</b> El resultado final se hace a mano.</p></div></div>
-      <div><span>5</span><div><h3>Entrega</h3><p>Usa hojas blancas, escribe nombre, código, procedimiento y explicación. Engrapa tus hojas. Fecha límite: <b>miércoles 30 de septiembre.</b></p></div></div>
-      <div><span>6</span><div><h3>Guarda tu avance digital</h3><p>Al terminar, puedes generar un archivo de avance. No contiene tu hoja escrita; sirve para que el docente pueda analizar tus aciertos y errores cuando se lo solicite.</p></div></div>
-    </div>
-    <div class="callout"><h3>¿La página funciona sin Internet?</h3><p>Sí, <b>después de abrirla una vez en línea</b>, el sitio instala una copia local. Después puede seguir funcionando sin conexión. Los datos de práctica quedan en el navegador de tu equipo.</p><p><b>Importante:</b> el modo sin conexión no significa que la entrega sea automática. Tu evidencia principal sigue siendo la hoja escrita.</p></div>
-  </section>
+<section id="manual" class="view">
+  <div class="section-head"><span class="eyebrow">MANUAL DE USO</span><h2>¿Qué hago aquí?</h2><p>Piensa en esta página como un laboratorio: primero observas, después pruebas y al final haces un reto individual.</p></div>
+  <div class="steps">
+    <div><span>1</span><div><h3>Abre los 3 casos modelo</h3><p>En cada caso aparece primero la teoría, después un ejemplo resuelto y al final una mini práctica. No empieces por el test: <b>primero comprende la idea.</b></p></div></div>
+    <div><span>2</span><div><h3>Usa las pistas visuales</h3><p>Busca flechas, tablas, palabras resaltadas y pasos numerados. Son tu “mapa” para no perderte.</p></div></div>
+    <div><span>3</span><div><h3>Amplía solo lo necesario</h3><p>Cuando un tema te parezca difícil, usa los botones <b>“Buscar en línea”</b>. Encontrarás búsquedas ya preparadas para Google y YouTube.</p></div></div>
+    <div><span>4</span><div><h3>Entra a “Mi reto”</h3><p>Escribe tu <b>número de matrícula</b>. La página identifica tu actividad y te muestra solamente lo necesario para resolverla.</p></div></div>
+    <div><span>5</span><div><h3>Resuelve en hojas blancas</h3><p>Escribe nombre, grupo, matrícula, caso, procedimiento, resultado y explicación. Engrapa las hojas. Fecha: <b>miércoles 30 de septiembre de 2026</b>.</p></div></div>
+    <div><span>6</span><div><h3>Recuerda lo aprendido para la evaluación</h3><p>El reto no es para memorizar respuestas: es para que puedas volver a construir el procedimiento cuando cambie el ejemplo.</p></div></div>
+  </div>
+  <div class="callout"><h3>¿Funciona sin Internet?</h3><p>Sí, después de cargarla una vez en línea. La aplicación guarda sus archivos en el navegador y puede continuar en modo offline. Las búsquedas externas y cualquier actualización sí requieren Internet.</p></div>
+  <div class="callout yellow"><h3>¿Qué debo entregar?</h3><p><b>La página es para estudiar y practicar.</b> La evidencia formal es tu trabajo escrito a mano en hojas blancas y engrapadas.</p></div>
+</section>
 
-  <section id="casos" class="view">
-    <div class="section-head"><span class="eyebrow">3 CASOS MODELO</span><h2>Aprende mirando un problema real</h2><p>Cada caso conecta varias ideas del PDF: texto, limpieza, representación, comparación y modelos.</p></div>
-    <div id="cases"></div>
-  </section>
+<section id="casos" class="view">
+  <div class="section-head"><span class="eyebrow">3 CASOS MODELO · TEORÍA + EJEMPLO + DEDUCCIÓN</span><h2>Primero entiende; después contesta.</h2><p>Los casos siguen el recorrido visual del material base: texto → preprocesamiento → representación → modelado → resultado.</p></div>
+  <div id="cases"></div>
+</section>
 
-  <section id="reto" class="view">
-    <div class="section-head"><span class="eyebrow">TRABAJO INDIVIDUAL</span><h2>Tu reto personalizado</h2><p>Introduce la clave que te corresponde. No publiques tu clave en grupos de chat.</p></div>
-    <div class="keybox"><label for="codeInput">Clave de actividad</label><div class="row"><input id="codeInput" placeholder="Ej. PNL-07-J3P" autocomplete="off"><button id="loadTask">Mostrar mi reto</button></div><small>La clave sirve para asignarte una variante. La página no pide teléfono ni otros datos personales.</small></div>
-    <div id="taskArea"></div>
-  </section>
+<section id="reto" class="view">
+  <div class="section-head"><span class="eyebrow">TRABAJO INDIVIDUAL</span><h2>Mi reto</h2><p>Es más rápido que usar una clave. Escribe tu número de matrícula y deja que el laboratorio localice tu actividad.</p></div>
+  <div class="keybox"><label for="matriculaInput">Número de matrícula</label><div class="row"><input id="matriculaInput" inputmode="numeric" placeholder="Escribe únicamente los números" autocomplete="off"><button id="loadTask">Mostrar mi tarea</button></div><small>Tu matrícula se usa en este dispositivo para localizar la actividad. No escribas datos personales adicionales.</small></div>
+  <div id="taskArea"></div>
+</section>
 
-  <section id="refuerzo" class="view">
-    <div class="section-head"><span class="eyebrow">REFUERZO EN EQUIPO</span><h2>4 temas · 4 equipos · 5 integrantes</h2><p>Estos temas refuerzan la parte del recorrido que más necesitas dominar antes de la evaluación.</p></div>
-    <div class="grid2" id="teams"></div>
-    <div class="notice"><b>Producto de exposición:</b> 7 minutos por equipo, una lámina o cartel sencillo, un ejemplo hecho por ustedes y 3 preguntas para el grupo. No memoricen: expliquen con sus palabras.</div>
-  </section>
+<section id="refuerzo" class="view">
+  <div class="section-head"><span class="eyebrow">REFUERZO Y EXPOSICIÓN</span><h2>4 temas para fortalecer antes de la evaluación</h2><p>Recuperen <b>el equipo y el orden de exposición tal como lo hicieron en M2S1</b>. El miércoles pasarán a exponer. Aquí tienen una guía amplia para prepararse.</p></div>
+  <div class="refuerzo-banner"><strong>MIÉRCOLES: EXPOSICIONES</strong><span>7–10 minutos por equipo · un ejemplo visible · explicación con sus palabras · 3 preguntas al grupo</span></div>
+  <div class="grid2" id="teams"></div>
+</section>
 </main>
-<footer><span>Laboratorio PNL 2026</span><span>Contenido educativo · uso escolar</span></footer>
+<footer><span>Laboratorio PNL 2026 · CECyTE</span><span>Uso escolar · portal del alumnado</span></footer>
 <script src="./shared/data.js"></script>
 <script src="app.js"></script>
 </body>
