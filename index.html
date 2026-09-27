@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Laboratorio PNL | Alumno</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">PNL</div><div><strong>Laboratorio de Procesamiento de Lenguaje Natural</strong><small>CECyTE · Actividad del 30 de septiembre de 2026</small></div></div>
+  <div class="status"><span id="netDot">●</span> <span id="netText">Comprobando...</span></div>
+</header>
+<nav class="nav" aria-label="Navegación principal">
+  <button data-view="inicio" class="active">Inicio</button>
+  <button data-view="manual">Manual</button>
+  <button data-view="casos">3 casos modelo</button>
+  <button data-view="reto">Mi reto</button>
+  <button data-view="refuerzo">Equipos de refuerzo</button>
+</nav>
+<main class="wrap">
+  <section id="inicio" class="view active">
+    <div class="hero">
+      <div><span class="eyebrow">APRENDER → PRACTICAR → EXPLICAR</span><h1>El lenguaje humano puede convertirse en datos.</h1><p>Esta página te guía paso a paso. No necesitas dominar inglés ni matemáticas avanzadas. Primero entiende la idea, después practica y al final resuelve tu reto individual en hojas blancas.</p></div>
+      <div class="deadline"><b>ENTREGA</b><strong>Miércoles 30</strong><span>septiembre de 2026</span></div>
+    </div>
+    <div class="grid3">
+      <article class="card"><h3>1 · Estudia</h3><p>Lee los tres casos. Cada uno explica qué entra, qué hace el método y qué sale.</p><button onclick="go('casos')">Ver casos</button></article>
+      <article class="card"><h3>2 · Practica</h3><p>Haz las mini preguntas. La página te avisa si tu respuesta coincide y te explica por qué.</p><button onclick="go('casos')">Practicar</button></article>
+      <article class="card accent"><h3>3 · Resuelve</h3><p>Escribe tu clave de actividad y recibirás <b>solo tu reto</b>. La entrega oficial es en hojas blancas.</p><button onclick="go('reto')">Abrir mi reto</button></article>
+    </div>
+    <div class="notice"><b>Regla de oro:</b> puedes usar una IA para estudiar, pero en tu hoja debe aparecer <strong>tu procedimiento</strong>: qué hiciste, qué obtuviste y por qué.</div>
+    <div class="simple-glossary"><h2>Palabras técnicas, en lenguaje sencillo</h2><div class="glossary-grid"><div><b>Token</b><span>pedacito de texto que el sistema puede manejar.</span></div><div><b>Vector</b><span>una lista de números que representa información.</span></div><div><b>Modelo</b><span>un sistema que usa datos para producir una salida.</span></div><div><b>Embedding</b><span>representación numérica que intenta conservar relaciones de significado.</span></div></div></div>
+  </section>
+
+  <section id="manual" class="view">
+    <div class="section-head"><span class="eyebrow">MANUAL</span><h2>Cómo usar esta página</h2><p>Lee este apartado antes de empezar. Está escrito con palabras simples para que puedas avanzar aunque tu lectura de inglés sea limitada.</p></div>
+    <div class="steps">
+      <div><span>1</span><div><h3>Entra y revisa el material</h3><p>Usa <b>3 casos modelo</b>. No te saltes los pasos. En PNL, el orden importa.</p></div></div>
+      <div><span>2</span><div><h3>Practica antes de tu tarea</h3><p>Contesta las pequeñas preguntas. Si fallas, lee la explicación y vuelve a intentarlo.</p></div></div>
+      <div><span>3</span><div><h3>Busca tu clave</h3><p>Tu docente te dará una clave como <code>PNL-07-J3P</code>. Escríbela exactamente.</p></div></div>
+      <div><span>4</span><div><h3>Resuelve tu reto en papel</h3><p>La página muestra la situación y las preguntas. <b>No sustituye tu entrega.</b> El resultado final se hace a mano.</p></div></div>
+      <div><span>5</span><div><h3>Entrega</h3><p>Usa hojas blancas, escribe nombre, código, procedimiento y explicación. Engrapa tus hojas. Fecha límite: <b>miércoles 30 de septiembre.</b></p></div></div>
+      <div><span>6</span><div><h3>Guarda tu avance digital</h3><p>Al terminar, puedes generar un archivo de avance. No contiene tu hoja escrita; sirve para que el docente pueda analizar tus aciertos y errores cuando se lo solicite.</p></div></div>
+    </div>
+    <div class="callout"><h3>¿La página funciona sin Internet?</h3><p>Sí, <b>después de abrirla una vez en línea</b>, el sitio instala una copia local. Después puede seguir funcionando sin conexión. Los datos de práctica quedan en el navegador de tu equipo.</p><p><b>Importante:</b> el modo sin conexión no significa que la entrega sea automática. Tu evidencia principal sigue siendo la hoja escrita.</p></div>
+  </section>
+
+  <section id="casos" class="view">
+    <div class="section-head"><span class="eyebrow">3 CASOS MODELO</span><h2>Aprende mirando un problema real</h2><p>Cada caso conecta varias ideas del PDF: texto, limpieza, representación, comparación y modelos.</p></div>
+    <div id="cases"></div>
+  </section>
+
+  <section id="reto" class="view">
+    <div class="section-head"><span class="eyebrow">TRABAJO INDIVIDUAL</span><h2>Tu reto personalizado</h2><p>Introduce la clave que te corresponde. No publiques tu clave en grupos de chat.</p></div>
+    <div class="keybox"><label for="codeInput">Clave de actividad</label><div class="row"><input id="codeInput" placeholder="Ej. PNL-07-J3P" autocomplete="off"><button id="loadTask">Mostrar mi reto</button></div><small>La clave sirve para asignarte una variante. La página no pide teléfono ni otros datos personales.</small></div>
+    <div id="taskArea"></div>
+  </section>
+
+  <section id="refuerzo" class="view">
+    <div class="section-head"><span class="eyebrow">REFUERZO EN EQUIPO</span><h2>4 temas · 4 equipos · 5 integrantes</h2><p>Estos temas refuerzan la parte del recorrido que más necesitas dominar antes de la evaluación.</p></div>
+    <div class="grid2" id="teams"></div>
+    <div class="notice"><b>Producto de exposición:</b> 7 minutos por equipo, una lámina o cartel sencillo, un ejemplo hecho por ustedes y 3 preguntas para el grupo. No memoricen: expliquen con sus palabras.</div>
+  </section>
+</main>
+<footer><span>Laboratorio PNL 2026</span><span>Contenido educativo · uso escolar</span></footer>
+<script src="./shared/data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
